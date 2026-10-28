@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DataLens (Simplified)</title>
+    <title>DataLens </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
     <div class="container">
-        <h1>DataLens <span class="subtitle">— Simplified CSV Insight Tool</span></h1>
-        <p class="tagline">Upload a CSV. Get a column profile and 4 quick statistical insights. No data is stored.</p>
+        <h1>DataLens <span class="subtitle">— Simplified CSV Insight Tool & Automated Dataset Diagnostics.</span></h1>
+        <p class="tagline">Upload a CSV.And get Instantly profile columns and uncover statistical insight. Visualize You Data.</p>
 
         <form action="/analyze" method="post" enctype="multipart/form-data" class="upload-form">
             <input type="file" name="csv_file" accept=".csv" required>
             <button type="submit">Analyze CSV</button>
         </form>
-
+ 
         {% if error %}
         <div class="error-box">
             <strong>Error:</strong> {{ error }}
